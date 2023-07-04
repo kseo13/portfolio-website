@@ -1,0 +1,94 @@
+/*
+Colors used:
+Primary Color (Blue): #171A14;
+Secondary Color (Green): #489c79;
+*/
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+color: #08090A;
+}
+body {
+  background-color: #F4F7F5;
+  font-family: 'helvetica', sans-serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #171A14;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+a {
+    color: #FFB140;
+    text-decoration: none; /* No underlining */
+  }
+  a:hover {
+    color: #575A5E;
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+  a:visited { /* visited link */
+    color: #FF990A;
+  }
+  a:active { /* selected link */
+    color: #08090A;
+  }
+  .button {
+    display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+    background-color: #C2E812;
+    color: #08090A; /* needed to override the default link color */
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #575A5E; /* width of the border, type, color */
+    transition: 0.2s opacity;
+  }
+  .button:hover {
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+  }
+  .button.contact {
+    background-color: transparent;
+    color: #F4F7F5;
+    text-transform: uppercase;
+    border: 2px solid #FF990A;
+  }
+  .button.contact:hover {
+    background-color: #C2E812;
+    color: #FF990A;
+  }
+  header {
+    background-color: #F4F7F5;
+    padding: 10px;
+    margin: 10px;
+  }
+  /* Layout styling */
+  .container {
+    padding: 0 15px;
+  }
+  .row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  }
+  img {
+    width: 100%;
+  }
