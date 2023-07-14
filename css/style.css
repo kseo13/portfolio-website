@@ -6,12 +6,15 @@ Secondary Color (Green): #489c79;
 h1 {
     font-size: 30px;
     font-weight: 700;
-color: #08090A;
+color: #171A14;
+}
+* {
+  box-sizing: border-box;
 }
 body {
   background-color: #F4F7F5;
   font-family: 'helvetica', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
+  font-size: 18px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #171A14;
@@ -58,10 +61,12 @@ a {
     background-color: #C2E812;
     color: #08090A; /* needed to override the default link color */
     font-weight: 400;
+    text-decoration: none;
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid #575A5E; /* width of the border, type, color */
-    transition: 0.2s opacity;
+    transition-duration: 0.2s;
+    transition-property: opacity;
   }
   .button:hover {
     opacity: 0.8; /* Reduces the opacity of the button to 80% */
@@ -78,11 +83,11 @@ a {
     color: #FF990A;
   }
   header {
-    background-color: #FFFFFF;
-    text-align: center;
+    background-color: #F4F7F5;
+    text-align: unset;
     padding: 10px;
     margin: 10px;
-    border-bottom: 3px solid #4a4a4a;
+    border-bottom: 3px solid #C2E812;
   }
   selector {
     margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
@@ -92,10 +97,11 @@ a {
   }
   .css-box-shadow{
     /*start ------------*/
-    width: [object Object]px; 
-    height: [object Object]px; 
+  
+    width: auto; 
+    height: 100px; 
     background: #F8F8F8; 
-    border: solid #BDBDBD 1px; 
+    border: solid #000000 1px; 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
     -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
     -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
@@ -105,6 +111,9 @@ a {
   }
 /* Layout styling */
   .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 15px;
   }
   .row {
@@ -130,10 +139,65 @@ a {
     font-weight: 700;
     color: #4a4a4a;
   }
-  #hero {
-    background-color: #FFFFFF;
+  #hero span {
+    background-color: #ffe4c4;
     padding: 20px 0;
-    display: inline-block;
+    display: block;
     width: 100%;
   }
-  
+  /* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+}
+.col-md-6 {
+  width: 50%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 10px
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation-duration: 10s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
