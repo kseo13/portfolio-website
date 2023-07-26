@@ -58,13 +58,13 @@ a {
   }
   .button {
     display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-    background-color: #C2E812;
-    color: #08090A; /* needed to override the default link color */
+    background-color: #000000;
+    color: #C2E812; /* needed to override the default link color */
     font-weight: 400;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid #575A5E; /* width of the border, type, color */
+    border-bottom: 2px solid #FF990A; /* width of the border, type, color */
     transition-duration: 0.2s;
     transition-property: opacity;
   }
@@ -93,7 +93,7 @@ a {
     margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
   }
   .logo {
-    max-width: 250px;
+    max-width: 100px;
   }
   .css-box-shadow{
     /*start ------------*/
@@ -101,13 +101,13 @@ a {
     width: auto; 
     height: 100px; 
     background: #F8F8F8; 
-    border: solid #000000 1px; 
+    border: solid #F8F8F8 1px; 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
     -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
     -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
   }
   main {
-    padding-top: 133px;
+    padding-top: 56px;
   }
 /* Layout styling */
   .container {
@@ -122,6 +122,15 @@ a {
   img {
     width: 100%;
   }
+  .img-container {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+  }
+.img-container img {
+    width: 100%
+    height: 100%
+}
   #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
   #hero h1 {
     text-align: center; /* Centers text */
@@ -132,6 +141,7 @@ a {
   nav > ul {
     list-style-type: none;
     padding: 0;
+    margin: 1em 0;
   }
   nav > ul > li > a {
     padding: 0 15px;
@@ -188,7 +198,7 @@ Medium devices (640px and larger)
   to {transform: translate(200px,50px);}
 }
 .cloud-front {
-  animation-duration: 10s;
+  animation-duration: 30s;
   animation-name: cloud-move;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -200,4 +210,36 @@ Medium devices (640px and larger)
 }
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
+.navtoggle li:not(:last-child) { /* hides all tabs except for last li */
+  display: none;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 8px 0;
+  /* border-top: 1px solid rgba (255, 127, 80, 0.5); */
+  text-align: right;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
 }

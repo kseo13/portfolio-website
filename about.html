@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+		<script src="https://kit.fontawesome.com/348f5fd272.js" crossorigin="anonymous"></script>
     <title>Kelvin Seo | UI/UX Designer</title>
 </head>
 <body>
     <header>
-        <div class="css-box-shadow">    
-            <img src="img/KSlogo.png" alt="Kelvin Seo logo" class="logo">
-            <nav>
-                <ul class="navigation">
-                <li><a href="about.html">About</a>
-                <a href="index.html">Work</a>
-                <a href="contact.html">Contact</a></li>
-                </ul>        
-            </nav>
+        <div class="css-box-shadow"> 
+			<div class="navtoggle" id="myNavtoggle">    
+            	<img class="logo" src="img/KS-logo.png" alt="Kelvin Seo logo">
+            	<nav>
+                	<ul class="navigation">
+					<li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>	
+                	<li>
+					<a href="about.html">About</a>
+                	<a href="index.html">Work</a>
+                	<a href="#contact">Contact</a></li>
+                	</ul>        
+            	</nav>
+			</div>
         </div>    
     </header>
 		<main>
 			<div id="hero">
 				<div class="container">
-				<h1>Hello World.</h1>
+					<h1>About</h1>
+				</div>
 			</div>
+			<div class="img-container">
+				<div class="col-md-6 col-lg-7"></div>
 				<picture>
-					<img src="img/profilepic.png" alt="Profile Picture">
+					<img src="img/profilepic.png" alt="Profile Picture" width="200px">
 				</picture>
-					<div>
-						<h2>My Story</h2>
-					</div>
-						<p>
-							Hello! My name is Kelvin, I am a UX/UI designer currently based in San Francisco, California.
+				</div>
+			</div>
+					<div id="hero">
+						<div class="container">
+							<h2 align="center">My Story</h2>
+						<p align="center">
+							Hello! My name is Kelvin Seo, I am a UX/UI designer currently based in San Francisco, California.
 							<br>With a background in Graphic Design, my goal is to create aesthetically-pleasing, minimal designs that are functional and easy-to-use. 
-							<br>My other passions are music and photography. I enjoy DJing and shooting street photography. 
-						</p>
-						<a href="#" target="_blank">My Resume</a>
+							<br>My other passions are music and photography. I enjoy DJing and shooting street photography. You can check out my creative works and follow me on VSCO and Behance in the links below. 
+						<br><br>
+						<a href="#" class="button" target="_blank">My Resume</a></p>
+					</div>
+				</div>
+				<hr>
+						<div id="hero">
+							<div class="container">
+								<h2>Skills and Tools</h1>
+							</div>
 						<div id="work">
-							<h2>Skills and Tools</h2>
 							<div class="container">
 								<div class="col-md-6 col-lg-7">
 									<h3>Relevant Skills</h3>
 									<ul>
-									<li>User research</li>
+									<li>User Research</li>
 									<li>Competitive Analysis</li>
-									<li>User flows</li>
+									<li>User Flows</li>
 									<li>Prototyping (Low, Mid, Hi-Fidelity)</li>
 									<li>Wireframing</li>
-									<li>Frontend development</li>
+									<li>Frontend Development</li>
 									<li>Graphic Design</li>
 									</ul>
 								</div>
@@ -55,12 +71,12 @@
 						</div>
 						<div id="work">
 							<div class="container">
-								<div class =row>
+								<div class ="row">
 									<div class="column col-md-6 col-lg-5">
 										<h3>Tools I Use</h3>
 										<ul>
-											<li>Adobe XD</li>
 											<li>Figma</li>
+											<li>Adobe XD</li>
 											<li>Adobe Illustrator</li>
                                     		<li>Adobe Photoshop</li>
 										</ul>
@@ -69,13 +85,18 @@
 							</div>
 						</div>
 		</main>
+		<section id="contact">
 		<footer id="contact">
 			<div class="container">
 				<div class="row">	
 					<div class="col-md-6">
+						<div id="hero">
+							<div class="container">
+							<h2>Contact</h2>
+							<p>Do you like my work and want to discuss opportunities? Let's chat!</p>
+							</div>
+						</div>
 				</div>
-					<h2 align="left">Get in Touch</h2>
-					<p align="center">Do you like my work and want to discuss opportunities? Please call <a href="tel:4151234567">(415)123-4567</a></p>
 					<nav>
 						<ul class="navigation"><li>
 							<a href="mailto:kelvinseo.uiux@gmail.com"><svg data-name="1-Email" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32"><path d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM30 25a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23z"/></svg></a>
@@ -87,8 +108,12 @@
 					</nav>
 				</div>
 			</div>
-			<p align="center">copyright Kelvin Seo 2023</p>
+			<p align="center"> © Kelvin Seo 2023. All rights reserved.</p>
 		</footer>
+		</section>
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

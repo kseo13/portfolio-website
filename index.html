@@ -4,29 +4,35 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+		<script src="https://kit.fontawesome.com/348f5fd272.js" crossorigin="anonymous"></script>
     <title>Kelvin Seo | UI/UX Designer</title>
 </head>
 <body>
     <header>
-        <div class="css-box-shadow">    
-            <img src="img/KSlogo.png" alt="Kelvin Seo logo" class="logo">
+        <div class="css-box-shadow">
+		<div class="navtoggle" id="myNavtoggle"> 
+            <img class="logo" src="img/KS-logo.png" alt="Kelvin Seo logo">
             <nav>
                 <ul class="navigation">
-                <li><a href="about.html">About</a>
+				<li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>	
+                <li>
+				<a href="about.html">About</a>
                 <a href="work.html">Work</a>
-                <a href="contact.html">Contact</a></li>
+                <a href="#contact">Contact</a></li>
                 </ul>        
             </nav>
+		</div>
         </div>    
     </header>
         <div id="hero">
             <div class="container">
-            <p>Hello! My name is Kelvin. I'm a UI/UX designer based in San Francisco, CA.
+            <p>Hello! My name is Kelvin Seo. I'm a UI/UX designer based in San Francisco, CA.
             I have a passion for creating aesthetically-pleasing and minimal designs that gives the best user experience.
             </p>
+			</div>
         </div>
     <div>
-        <h1>My Work</h1>
+        <h1 align="center">My Work</h1>
     </div>
     <div id="work">
         <div class="container">
@@ -40,8 +46,9 @@
                 <div class="column col-md-6 col-lg-5">   
                     <h2>Ready Chef</h2>
                     <p>Ready Chef is a responsive web app that allows users to save time planning meals by offering recipes that are easy to make with the ingredients the user already have.</p>
-                    <a href="#" class="button">View the Project</a>
+                    <a href="work.html" class="button">View the Project</a>
                 </div>
+			</div>
         </div>
     </div>
     <div id="work">
@@ -558,14 +565,18 @@
             </div>
         </div>
     </div>
+	</div>
 </body>
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
         </div>
+	<section id="contact">
+		<div class="column col-md-6 col-lg-5">
             <h1>Contact</h1>
-            <p align="center">Have a question or want to explore partnership opportunities? Please call <a href="tel:4151234567">(415) 123-4567</a></p>
+			<p>Do you like my work and want to explore partnership opportunities? Let's chat!</p>
+		</div>
         <nav>
             <ul class="navigation"><li>
                 <a href="mailto:kelvinseo.uiux@gmail.com"><svg data-name="1-Email" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32"><path d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM30 25a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23z"/></svg></a>
@@ -575,9 +586,13 @@
                 </a>
             </li></ul>
         </nav>
-    </div>
-    <p align="center">copyright Kelvin Seo 2023</p>
+    		</div>
+	</section>
+	</div>
+    <p align="center"> © Kelvin Seo 2023. All rights reserved.</p>
 </footer>
+<script src="js/jquery-3.7.0.min.js"></script>
 <script src="js/scripts.js"></script>
-</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
 </html>
