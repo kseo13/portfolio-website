@@ -41,7 +41,6 @@ h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
-
 a {
     color: #FFB140;
     text-decoration: none; /* No underlining */
@@ -97,7 +96,6 @@ a {
     right: 0;
     left: 0;
     bottom: 0;
-  
   }
   selector {
     margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
@@ -109,7 +107,6 @@ a {
     /*start ------------*/
   
     width: auto; 
-    height: 100px; 
     background: #F8F8F8; 
     border: solid #F8F8F8 1px; 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)  ; 
@@ -154,10 +151,12 @@ a {
     width: 100%
     height: 100%
 }
-  #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+  #work .row, #work2 .row, #work3 .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
   #hero h1 {
-    text-align: center; /* Centers text */
+    text-align: center;
   }
+ 
+  
   .center {
     text-align: center;
   }
@@ -178,6 +177,23 @@ a {
     display: block;
     width: 100%;
   }
+  .navtoggle, 
+  .navtoggle.responsive {
+    position: relative;
+  }
+  .navtoggle li:not(:last-child) { /* hides all tabs except for last li */
+    display: none;
+  }
+  .navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 20px;
+    padding-right: 0;
+  }
+  .navtoggle.responsive li  {
+    display: block;
+  }
   /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -191,6 +207,18 @@ Medium devices (640px and larger)
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  nav > ul > li {
+    display: inline-block
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  
+  .navtoggle li:last-child {
+    display: none;
   }
 }
 .col-md-6 {
@@ -233,34 +261,6 @@ Medium devices (640px and larger)
 }
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
-}
-.navtoggle li:not(:last-child) { /* hides all tabs except for last li */
-  display: none;
-}
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
-.navtoggle li:last-child {
-  display: none;
-}
-.navtoggle, .navtoggle.responsive {
-  position: relative;
-}
-.navtoggle li .icon {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  font-size: 20px;
-  padding-right: 0;
-}
-.navtoggle.responsive nav {
-  padding: 24px 0 0;
-}
-.navtoggle.responsive li  {
-  display: block;
-  padding: 8px 0;
-  /* border-top: 1px solid rgba (255, 127, 80, 0.5); */
-  text-align: right;
 }
 
 .navtoggle.responsive li:last-child {
