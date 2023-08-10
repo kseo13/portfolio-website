@@ -1,12 +1,8 @@
-/*
-Colors used:
-Primary Color (Blue): #171A14;
-Secondary Color (Green): #489c79;
-*/
 h1 {
+    text-align: center;
     font-size: 30px;
     font-weight: 700;
-color: #171A14;
+    color: #171A14;
 }
 * {
   box-sizing: border-box;
@@ -29,6 +25,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: 2.25em;
   font-weight: 700;
 }
@@ -58,7 +55,7 @@ a {
   .button {
     display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
     background-color: #000000;
-    color: #C2E812; /* needed to override the default link color */
+    color: #FFFFFF; /* needed to override the default link color */
     font-weight: 400;
     text-decoration: none;
     padding: 10px;
@@ -148,7 +145,7 @@ a {
     height: 200px;
   }
 .img-container img {
-    width: 100%
+    width: 100%;
     height: 100%
 }
   #work .row, #work2 .row, #work3 .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
